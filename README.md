@@ -74,7 +74,7 @@ services:
     restart: "unless-stopped"
   express_1:
     build:
-      context: .
+      context: ./server
     container_name: express1
     expose:
       - "3000" #첫번쨰 노드 서버는 3000번
@@ -84,7 +84,7 @@ services:
     restart: "unless-stopped"
   express_2:
     build:
-      context: .
+      context: ./server
     container_name: express2
     expose:
       - "3000" 
@@ -94,7 +94,7 @@ services:
     restart: "unless-stopped"
   express_3:
     build:
-      context: .
+      context: ./server
     container_name: express3
     expose:
       - "3000" 
@@ -104,8 +104,8 @@ services:
     restart: "unless-stopped"
   express_4:
     build:
-      context: .
-    container_name: express1
+      context: ./server
+    container_name: express4
     expose:
       - "3000" 
     volumes:
@@ -116,3 +116,5 @@ services:
 ```
 
 - 위는 도커 컴포즈 파일
+
+## 성공!!! 자세한 가이드및 배운 내용은 졸리니까 내일 정리하기!

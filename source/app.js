@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-app.listend(3000, '0.0.0.0', () => {
+app.listen(3000, '0.0.0.0', () => {
   console.log("start srever")
 });
 
