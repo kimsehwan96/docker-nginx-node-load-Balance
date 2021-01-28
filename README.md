@@ -13,6 +13,29 @@
 
 - nginx와 node 모두 도커를 이용할것이며, Dockerfile 및 docker-compose.yml을 활용한다.
 
+### 실제 결과
+
+`docker-compose up -d --build`
+
+![11](images/1.png)
+
+- docker-compose 커맨드 수행 결과. express1,2,3,4 컨테이너 및 proxy 컨테이너 생성
+
+![22](images/2.png)
+
+- 각 node 서버가 3000번으로 떠있다.
+
+- nginx conf에 가장 연결이 적게된 서버로 연결을 시키는 least_conn 알고리즘 상태에서의 테스트 수행결과
+- 각 서버는 자신만의 고유아이디를 갖고있다.
+
+![4](images/4.png)
+![5](images/5.png)
+![6](images/6.png)
+![7](images/7.png)
+
+- 총 4개의 각기 다른 uuid 확인 가능했다.
+
+
 - nginx conf
 
 ```conf
@@ -117,4 +140,6 @@ services:
 
 - 위는 도커 컴포즈 파일
 
-## 성공!!! 자세한 가이드및 배운 내용은 졸리니까 내일 정리하기!
+### 이 예제를 사용하는 방법
+
+- `docker-compose up -d --build`
